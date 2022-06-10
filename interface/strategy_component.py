@@ -103,8 +103,8 @@ class StrategyEditor(tk.Frame):
 
             elif base_param['widget'] == tk.Entry:
                 self.body_widgets[code_name][b_index] = tk.Entry(self._table_frame, justify=tk.CENTER, highlightthickness=False, width=base_param['width'])
-            elif base_param['widget'] == tkmac.Button:
-                self.body_widgets[code_name][b_index] = tk.Button(self._table_frame, text=base_param['text'],
+            elif base_param['widget'] == tk.Button:
+                self.body_widgets[code_name][b_index] = tkmac.Button(self._table_frame, text=base_param['text'],
                                         bg=base_param['bg'], fg=FG_COLOR, borderless=True,
                                         command=lambda frozen_command=base_param['command']: frozen_command(b_index))
             else:
